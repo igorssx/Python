@@ -1,0 +1,5 @@
+# D: A sobra quando 403 é dividido por 73
+#
+#
+d = 403 % 73
+print('A sobra quando 403 é dividido por 73 é',d)
