@@ -1,0 +1,21 @@
+# Exercício operadors lógicos.
+# Demonstração dos operadores NOT, AND e OR
+
+# NOT
+x = True
+y = False
+print(not x)
+print(not y)
+print('------------------------')
+
+# AND
+x = True
+y = False
+print(x and y) # Só vai imprimir True se ambas forem True.
+print('------------------------')
+
+# OR
+x = True
+y = False
+print(x or y) # Só vai imprimir True se UMA for True
+print('------------------------')
