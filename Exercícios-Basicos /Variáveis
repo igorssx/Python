@@ -1,0 +1,12 @@
+# H:
+# Atribiur o valor inteiro 3 à variável a
+# Atribiur o valor 4 à variável b
+# Atribiur à variável c o valor da expressão a*a + b*b
+
+a= 3
+b= 4
+c = a*a+b*b
+
+print('Valor de a é: ',a)
+print('Valor de b é: ',b)
+print('Valor de c é: ',c)
