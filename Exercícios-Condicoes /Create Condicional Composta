@@ -1,0 +1,14 @@
+# Exercício de condição composta
+# Basicamente se VERDADEIRO, um bloco é executado, caso FALSO outro bloco é executado.
+
+#if(condição):
+   # V= #instrução A
+   #else que quer dizer senão
+   # F= #instrução B
+
+# Desenvolva um programa que lê um valor inteiro e descobre se ele é par ou impar
+x = int(input('Digite um valor inteiro: '))
+if (x % 2 == 0): #Pega o numero que dividido por dois o resto é ZERO ele é par.
+    print('O número é par!')
+else:
+    print('O número é ímpar!')
