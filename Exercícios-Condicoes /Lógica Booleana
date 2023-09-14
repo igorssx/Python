@@ -1,0 +1,12 @@
+# Exercício de lógicas booleanas
+
+x = 10
+y = 1
+res = not x > y #primeiro ele vai resolver o relacional e depois negar.
+print(res)
+
+x = 10
+y = 1
+z = 5.5
+res = x > y and z == y
+print(res)
