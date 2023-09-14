@@ -1,0 +1,5 @@
+# B: A média entre 23, 19 e 31
+#
+#
+res = (23 + 19 + 31)/3
+print('A média entre 23, 19 e 31 é',res)
