@@ -1,0 +1,5 @@
+# C: O número de vezes que 73 cabe em 403
+#
+#
+numero = 403 // 73
+print('O número de vezes que 73 cabe em 403 é',numero)
