@@ -1,0 +1,49 @@
+# Programa para Recepção de um Hospital, para cadastro de paciente, com senha.
+#
+#
+from random import seed #Importando a biblioteca
+from random import randint #Importando a biblioteca
+
+cadastro = {'voucher':[],'nome':[],'email':[],'telefone':[],'curso':[]} #Criei o dicionario com listas especificadas
+
+def valida_int(pergunta,min,max): #Função para validar os dados de entrada do usuario
+    x = int(input(pergunta)) #Apresenta a pergunta para o usuario
+    while ((x < min) or (x > max)): #Valida enquanto o numero inserido for maior que o minimo e maior que o maximo
+        print('Erro: digite uma opção válida!') #Ele mostra o erro de numero inserido
+        x = int(input(pergunta)) # e repete a pergunta até que o usuario insira 1, 2 ou 0.
+    return x #Retorna o valor inserido para o programa.
+
+while True: #Inicio do programa principal em looping
+    print('*' * 11 + 'MENU' + '*'*11) # Realizei o print de um menu para melhor compreenção do usuario
+    print('1 - Nova inscrição')
+    print('2 - Visualizar inscrição')
+    print('0 - Encerrar')
+    operacao = valida_int('Opção escolhida: ',0,2) #Chama a função e retorna o valor inserido tendo como minimo o 0 e maximo 2
+    if (operacao == 0): #Se a operacao for igual a 0 encerra o programa
+        print('Programa encerrado...') #Mostra a mensagem de programa encerrado
+        break #Encerra o programa definitivamente
+    elif (operacao == 1): # Se a operacao escolhida for 1 começa o cadastro
+        seed(100) # Gerador de senha aleatória
+        voucher = randint(100, 400) # Gerador de senha aleatória (tendo como parametro iniciar em 100 até 400)
+        nome = input('Digite seu nome: ') #Solicito informacoes para cadastro
+        email = input('Digite seu email: ') #Solicito informacoes para cadastro
+        telefone = int(input('Digite seu telefone: ')) #Solicito informacoes para cadastro
+        curso = input('Digite seu curso: ') #Solicito informacoes para cadastro
+        cadastro['voucher'].append(voucher) #Em seguida salvo as informaçoes em sua respectiva lista
+        cadastro['nome'].append(nome) #Adiciona a informacao inserida no dicionario na lista nome
+        cadastro['email'].append(email) #Adiciona a informacao inserida no dicionario na lista email
+        cadastro['telefone'].append(telefone) #Adiciona a informacao inserida no dicionario na lista telefone
+        cadastro['curso'].append(curso) #Adiciona a informacao inserida no dicionario na lista curso
+    elif (operacao == 2): # Se a operacao escolhida for 2 vamos visualizar a lista
+        if (len(cadastro['nome']) == 0): # Condicao se o numero de caracter no dicionario cadastro em especifico na lista nome for igual a 0
+            print('Nenhuma inscrição cadastrada.') #Da um print que está vazia
+        else: #Se não for igual a 0
+            print('-' * 19 + 'Lista Inscritos' + '-' * 19) # Print da lista de inscritos
+            print('voucher :',cadastro['voucher']) #mostra o numero do voucher
+            print('nome : ',cadastro['nome']) # Exibe na tela o nome cadastrado no sistema.
+            print('email : ',cadastro['email']) # Exibe na tela o email cadastrado no sistema.
+            print('telefone : ',cadastro['telefone']) # Exibe na tela o telefone cadastrado no sistema.
+            print('curso : ',cadastro['curso']) # Exibe na tela o curso cadastrado no sistema.
+            print('-' * 40)
+    else:
+        print('Erro: digite uma opção válida!') # Se a opção escolhida for qualquer numero diferente de 0,1 e 2 aparece a mensagem e 
