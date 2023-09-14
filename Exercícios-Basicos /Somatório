@@ -1,0 +1,5 @@
+# A: O somatório dos 5 primeiros numeros inteiros e positivos.
+#
+#
+soma = 1+2+3+4+5
+print('O somatório dps 5 primeiros numeros inteiros e positivos é',soma)
