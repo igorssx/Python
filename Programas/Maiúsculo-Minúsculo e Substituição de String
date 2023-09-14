@@ -1,0 +1,7 @@
+# Programa para converter String para maiúsculo ou minúsculo e subtituir strings.
+#
+#
+nome = input('Digite um nome: ')
+novo_nome = nome.lower().replace('a','@').replace('e','&').replace('i','!').replace('o','#').replace('u','*')
+print(nome.upper())
+print(novo_nome.upper())
