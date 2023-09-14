@@ -1,0 +1,37 @@
+# Calculadora em python.
+#
+#
+print('CALCULADORA')
+print('+ Adição')
+print('- Subtração')
+print('* Multiplicação')
+print('/ Divisçao')
+print('Precione outra tecla para sair.')
+
+op = input('Qual operação deseja realizar? ')
+if op == '+' or op == '-' or op == '*' or op == '/':
+    var1 = int(input('Digite o primeiro valor: '))
+    var2 = int(input('Digite o ssegundo valor: '))
+
+while (op != 's'):
+    if (op == '+'):
+        res = var1 + var2
+        print('Resultado: {} + {} = {}'.format(var1,var2,res))
+    elif (op == '-'):
+        res = var1 - var2
+        print('Resultado: {} - {} = {}'.format(var1,var2,res))
+    elif (op == '*'):
+        res = var1 * var2
+        print('Resultado: {} * {} = {}'.format(var1,var2,res))
+    elif (op == '/'):
+        res = var1 / var2
+        print('Resultado: {} / {} = {}'.format(var1,var2,res))
+    else:
+        print('Operação inválida.')
+
+    op = input('Qual operação deseja realizar? ')
+    if op == '+' or op == '-' or op == '*' or op == '/':
+        var1 = int(input('Digite o primeiro valor: '))
+        var2 = int(input('Digite o ssegundo valor: '))
+
+print('Encerrando o programa...')
