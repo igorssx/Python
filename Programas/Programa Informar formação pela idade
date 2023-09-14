@@ -1,0 +1,24 @@
+# Programa para informar formação pela idade.
+#
+#
+while True: 
+    nome = input('Nome da criança: ') #Solicito o nome da criança
+    idade = int(input('idade: ')) #Solicito a idade da criança
+    if (idade >= 1) and (idade <= 5): 
+        ensino = 'Ensino infantil' 
+        print('O(A) aluno(a) {} tem {} anos e está no {}.'.format(nome,idade,ensino)) 
+    elif (idade >= 6) and (idade <= 10):
+        ensino = 'Ensino fundamental |'
+        print('O(A) aluno(a) {} tem {} anos e está no {}.'.format(nome,idade,ensino))
+    elif (idade >= 11) and (idade <= 14):
+        ensino = 'Ensino fundamental ||'
+        print('O(A) aluno(a) {} tem {} anos e está no {}.'.format(nome,idade,ensino))
+    elif (idade >= 15):
+        ensino = 'Ensino médio'
+        print('O(A) aluno(a) {} tem {} anos e está no {}.'.format(nome,idade,ensino))
+    op = int(input('0 - Não     1 - Sim      Deseja continuar? '))
+    if (op == 0): 
+        print('Programa encerrado...') 
+        break 
+    else: 
+        continue 
