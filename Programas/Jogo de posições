@@ -1,0 +1,78 @@
+# Jogo de posições criado para uma atividade solicitada pela faculdade.
+#
+#
+fase1_0 = ['*', '*', '-', 'G'] # PRIMEIRO CRIEI AS LISTAS SEPARADAS DE CADA FASE DO JOGO
+fase1_1 = ['R', '-', '*', '*']
+fase2_0 = ['-', '*', '*', '*']
+fase2_1 = ['*', 'C', '-', '-']
+fase3_0 = ['-', '*', '*', '*']
+fase3_1 = ['-', 'G', '-', '*']
+fase4_0 = ['-', '-', '-', '*']
+fase4_1 = ['*', 'R', '*', '*']
+while True: # Inicio do programa
+    print(' ' * 8 + 'HOTEL DOS ANIMAIS') # Exibe a tela de apresentação
+    print('Especificando posição')
+    print('[1,2,3,4]')
+    print('[5,6,7,8]')
+
+    print('Bem vindos a fase 1!') # Inicio da fase 1
+    print('Na fase 1, o jogador deve alocar o RATO e o GATO na seguinte matriz que representa os quartos:')
+    print(fase1_0) # Exibe a lista da fase 1
+    print(fase1_1) # Exibe a lista da fase 1
+    op1 = int(input('Em qual posição quer alocar o RATO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op2 = int(input('Em qual posição quer alocar o GATO? ')) # Solicita ao usuario em qual posição vai inserir.
+    if (op1 == 3): #De acordo com as regras se o usuario colocar o rato na posicao 3 ele perde
+        print('Game over!') #Imprime na tela game over
+        break # e finaliza o jogo
+    elif (op1 == 6): #Se o usuario colocar o rato na posicao correta ele avança para proxima fase.
+        print('Você avançou para próxima fase.') #exibee mensagem que avançou de fase.
+    print('*' * 40)
+    print('Bem vindos a fase 2!')
+    print('Na fase 2, o jogador deve alocar o CÃO, CÃO e o OSSO na seguinte matriz que representa os quartos:')
+    print(fase2_0) # Exibe a lista da fase
+    print(fase2_1) # Exibe a lista da fase
+    op3 = int(input('Em qual posição quer alocar o CÃO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op4 = int(input('Em qual posição quer alocar o CÃO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op5 = int(input('Em qual posição quer alocar o OSSO? ')) # Solicita ao usuario em qual posição vai inserir.
+    if (op5 == 7): #De acordo com as regras se o usuario colocar o OSSO ao lado do CAO ele perde
+        print('Game over!') #Imprime na tela game over!
+        break # e finaliza o jogo
+    elif (op5 == 8): # Se o jogador alocar o OSSO perto do
+        print('Você avançou para próxima fase.') #Caso o usuario acerte, aparecerá esta mensagem.
+    print('*' * 40)# Apenas um divisor para separar as mensagens
+    print('Bem vindos a fase 3!') #Inicio da fase 3
+    print('Na fase 3, o jogador deve alocar o GATO, RATO e o OSSO na seguinte matriz que representa os quartos:')
+    print(fase3_0) # Exibe a lista da fase
+    print(fase3_1) # Exibe a lista da fase
+    op6 = int(input('Em qual posição quer alocar o GATO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op7 = int(input('Em qual posição quer alocar o RATO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op8 = int(input('Em qual posição quer alocar o OSSO? ')) # Solicita ao usuario em qual posição vai inserir.
+    if (op7 == 5)or(op7 == 7): #Se o jogador alocar o RATO perto do GATO ele perde.
+        print('Game over!') #Imprime na tela game over!
+        break # e finaliza o jogo
+    elif (op7 == 1): # Se o jogador colocar o RATO longe do GATO ele passa de fase.
+        print('Você avançou para próxima fase.')
+    print('*' * 40) #Linha para dividir as mensagens
+    print('Bem vindos a fase 4!') #Inicio da fase 4
+    print('Na fase 4, o jogador deve alocar o QUEIJO, QUEIJO e o OSSO na seguinte matriz que representa os quartos:')
+    print(fase4_0) # Exibe a lista da fase
+    print(fase4_1) # Exibe a lista da fase
+    op9 = int(input('Em qual posição quer alocar o QUEIJO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op10 = int(input('Em qual posição quer alocar o QUEIJO? ')) # Solicita ao usuario em qual posição vai inserir.
+    op11 = int(input('Em qual posição quer alocar o OSSO? ')) # Solicita ao usuario em qual posição vai inserir.
+    if (op9 == 2)or(op10 == 2): #Se o jogador alocar o QUEIJO proximo ao RATO ele perde
+        print('Game over!') #Imprime na tela game over!
+        break # e finaliza o jogo
+    elif (op11 == 2): #Se o jogador alocar o OSSO na posicao correta ele vence.
+        print('*' * 30) #Linha para dividir as mensagens
+        print('Parabéns, você ganhou!') #Mensagem do vencedor
+        print('*' * 30) #Linha para dividir as mensagens
+    print('*' * 40) #Linha para dividir as mensagens
+    print('1 - SIM') #Menu para dar opção se o jogador quer jogar novamente
+    print('2 - NÃO')#Menu para dar opção se o jogador quer jogar novamente
+    termino = int(input('Deseja jogar novamente? ')) #Solicita a opcao se quer jogar ou nao
+    if (termino == 2): #Se o jogador digitar 2 o jogo finaliza
+        print('Encerrando o programa...') #Se o jogador digitar 2 aparece a mensagem e
+        break #Finaliza o jogo
+    else: #Se o jogador digitar 1 o jogo continua
+        continue #Continua e recomeça o jogo.
